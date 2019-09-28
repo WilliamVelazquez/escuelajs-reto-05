@@ -4,6 +4,8 @@ const $observe = document.getElementById('observe');
 // const API = 'https://us-central1-escuelajs-api.cloudfunctions.net/characters';
 const API = 'https://swapi.co/api/people';
 
+localStorage.removeItem('next_fetch');
+
 const getData = async api => {
   try {
     const request = await fetch(api);
