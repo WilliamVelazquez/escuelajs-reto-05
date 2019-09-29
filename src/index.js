@@ -30,14 +30,27 @@ const getData = async api => {
   }
 }
 
+const end = () => {
+  let output = `
+  <article class="Card">
+    <h2>Ya no hay personajes...</h2>
+  </article>
+  `
+  let lastItem = document.createElement('section');
+  lastItem.classList.add('FinalItems');
+  lastItem.innerHTML = output;
+  $app.appendChild(lastItem);
+  intersectionObserver.unobserve($observe);
+}
+
 const loadData = () => {
   const storageURL = localStorage.getItem('next_fetch');
-  console.log('storageURL--->',storageURL);
+  // console.log('storageURL--->',storageURL);
   
   const URL = storageURL?storageURL:API;
-  console.log('URL',URL);
+  // console.log('URL',URL);
 
-  (!URL||URL==='null')?console.log('Fin'):getData(URL);
+  (!URL||URL==='null')?end():getData(URL);
 }
 
 const intersectionObserver = new IntersectionObserver(entries => {

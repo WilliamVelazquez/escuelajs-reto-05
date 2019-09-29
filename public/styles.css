@@ -21,6 +21,15 @@ body {
   display: grid;
 }
 
+.FinalItems {
+  grid-template-columns: repeat(1, 1fr);
+  background-color: blueviolet;
+  color: #fff;
+  grid-gap: 1.5rem;
+  grid-row-gap: 1.5em;
+  display: grid;
+}
+
 .Card {
   text-decoration: none;
   box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
