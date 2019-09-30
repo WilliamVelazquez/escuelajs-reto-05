@@ -17,7 +17,7 @@ body {
   justify-content: center;
 }
 
-.Main h1{
+.Main h1 {
   color: #fff;
   text-align: center;
 }
@@ -42,12 +42,12 @@ body {
   display: grid;
 }
 
-.FinalItems .Card{
+.FinalItems .Card {
   background-color: #44c767;
   border: 2px solid #18ab29;
 }
 
-.FinalItems .Card h2{
+.FinalItems .Card h2 {
   font-weight: bold;
   justify-content: space-around;
 }
@@ -75,6 +75,10 @@ body {
   padding: 5px 10px;
   display: flex;
   justify-content: space-between;
+}
+
+.HideElement {
+  display: none !important;
 }
 
 @keyframes fade {

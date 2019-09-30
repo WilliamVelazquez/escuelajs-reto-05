@@ -1,4 +1,5 @@
 const $app = document.getElementById('app');
+const $loader = document.getElementById('loader');
 const $observe = document.getElementById('observe');
 const API = 'https://rickandmortyapi.com/api/character/';
 // const API = 'https://us-central1-escuelajs-api.cloudfunctions.net/characters';
@@ -9,6 +10,8 @@ localStorage.removeItem('next_fetch');
 const getData = async api => {
   try {
     intersectionObserver.unobserve($observe);
+    $loader.classList.remove('HideElement');
+
     const request = await fetch(api);
     const data = await request.json();
   
@@ -28,6 +31,7 @@ const getData = async api => {
     localStorage.setItem('next_fetch', data.info.next);
     // console.log('loaded :)');
     intersectionObserver.observe($observe);
+    $loader.classList.add('HideElement');
   } catch (error) {
     console.log(error);
   }
