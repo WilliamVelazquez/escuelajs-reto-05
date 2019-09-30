@@ -38,7 +38,6 @@ body {
   display: block;
   animation-duration: 4s;
   animation-name: fade;
-  height: 250px;
 }
 
 .Card img {
