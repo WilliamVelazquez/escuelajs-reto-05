@@ -36,7 +36,7 @@ const getData = async api => {
 const end = () => {
   let output = `
   <article class="Card">
-    <h2>Ya no hay personajes...</h2>
+    <h2>No hay más personajes!</h2>
   </article>
   `
   let lastItem = document.createElement('section');
